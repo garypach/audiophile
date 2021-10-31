@@ -1,8 +1,8 @@
 import Link from 'next/link'
 const Button = (props) => {
     return(
-        <div className="button-container">
-            <p>button</p>
+        <div className={`button-container ${props.buttontype}`}>
+            <p>{`${props.buttontext}`}</p>
         </div>
     )
 }

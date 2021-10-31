@@ -1,5 +1,4 @@
 .button-container{
-    background-color: #D87D4A;
     color: white;
     max-width: 160px;
     height: 48px;
@@ -7,4 +6,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.buttonorange{
+    background-color: #D87D4A;
+}
+.buttonblack{
+    background-color: black;
+}
+.buttonclear{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
 }

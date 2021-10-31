@@ -1,0 +1,210 @@
+.homeproduct-container {
+    padding: 0 20px 0 20px;
+    height: 100%;
+    max-width: 375px;
+    min-width: 320px;
+    margin-top: 80px;
+
+    &__box {
+        width: 100%;
+        height: 600px;
+        background: #D87D4A;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 55px;
+        width: 172.25px;
+        height: 207px;
+        & img{
+            width: 172.25px;
+            height: 207px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        bottom: 55px;
+        text-align: center;
+
+        & .homeproduct-header {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 40px;
+            /* or 111% */
+            padding: 20px;
+
+            text-align: center;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+        }
+
+        & .homeproduct-body {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            /* or 167% */
+            padding: 20px;
+            text-align: center;
+
+            color: #FFFFFF;
+
+            mix-blend-mode: normal;
+            opacity: 0.75;
+        }
+    }
+}
+
+.twohomeproduct-container{
+    padding: 0 20px 0 20px;
+    height: 100%;
+    max-width: 375px;
+    min-width: 320px;
+    position: relative;
+    height: 320px;
+    margin-top: 24px;
+
+    &__box {
+        width: 100%;
+        height: 320px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    &__img {
+        width: 327px;
+        height: 320px;
+        border-radius: 12px;
+
+        & img{
+            width: 327px;
+            height: 320px;
+            border-radius: 12px;
+
+        }
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        left: 24px;
+        & .button-container{
+            margin: 0;
+        }        
+
+        & .twohomeproduct-header {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        & .twohomeproduct-body {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            /* or 167% */
+            padding: 20px;
+            text-align: center;
+
+            color: #FFFFFF;
+
+            mix-blend-mode: normal;
+            opacity: 0.75;
+        }
+    }
+}
+
+.threehomeproduct-container {
+    padding: 0 20px 0 20px;
+    height: 100%;
+    max-width: 375px;
+    min-width: 320px;
+    margin-top: 24px;
+
+    &__box {
+        width: 100%;
+        height: 427px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0px;
+        width: 327px;
+        height: 200px;
+        border-radius: 12px;
+        & img{
+            width: 327px;
+            height: 200px;
+            border-radius: 12px;
+
+        }
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 12px;
+        height: 200px;
+        text-align: center;
+        background: #F1F1F1;
+        & .button-container{
+            margin: 0 24px;
+        } 
+        
+& .threehomeproduct-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 41px;
+    color: #000000;
+    text-align: left;
+    margin: 0 24px;
+    margin-top: 41px;
+
+
+}
+
+        & .threehomeproduct-body {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            /* or 167% */
+            padding: 20px;
+            text-align: center;
+
+            color: #FFFFFF;
+
+            mix-blend-mode: normal;
+            opacity: 0.75;
+        }
+    }
+}

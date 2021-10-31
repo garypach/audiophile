@@ -1,0 +1,68 @@
+.audiotext-container {
+    padding: 0 20px 0 20px;
+    height: 100%;
+    max-width: 375px;
+    min-width: 320px;
+
+    &__box {
+        width: 100%;
+        height: 698px;
+        background: white;
+        margin: 70px 0 20px 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0px;
+        border-radius: 12px;
+
+        & img{
+            border-radius: 12px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom:0px;
+
+        & .audiotext-header {
+            margin-top: 40px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 38px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000000;
+            & span{
+                color: #D87D4A;
+            }
+        }
+
+        & .audiotext-body {
+            margin-top: 32px;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            /* or 167% */
+            
+            text-align: center;
+            
+            color: #000000;
+            
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+    }
+}
