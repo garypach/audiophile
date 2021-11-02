@@ -18,7 +18,7 @@ const MenuBox = (props) =>{
         <div className="category-container__img">
             <Image src="/assets/shared/mobile/image-xx99-mark-one-headphones.png" alt={`${props.category}`} layout="fill"/>
        </div>
-       <Link href={`${props.category}`}>
+       <Link href={`/${props.category}`}>
            <a className="category-container__text">
        <div>
            <p>{props.category}</p>

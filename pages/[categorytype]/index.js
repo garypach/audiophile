@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "../../components/ui/button/button"
 import Category from "../../components/ui/category/category";
 import AudioText from "../../components/ui/audiotext/audiotext"
+import Link from "next/dist/client/link";
 export default function Index(props){  
     const showProducts = () => {
         return productData
@@ -30,8 +31,11 @@ export default function Index(props){
              }
             <p className={`categoryproduct-header`}>{item.name}</p>
             <p className={`categoryproduct-body`}>{item.description}</p>
+            <Link href={`/${props.query.categorytype}/${item.slug}`}>
+            <a>
             <Button buttontext="See Product" buttontype="buttonorange"/>
-             </div>
+            </a>
+            </Link>             </div>
            </div>
             </div>
         )})
