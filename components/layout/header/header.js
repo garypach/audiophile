@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import MobileMenu from '../mobilemenu/mobileMenu';
 import Link from 'next/dist/client/link';
+import Cart from '../../ui/cart/cart';
+import { useStateContext } from '../../CartProvider/cartprovider';
 const Header = () =>{
+    const newState = useStateContext();
+
         return(
         <div className="top-header">
            <MobileMenu/>
@@ -12,9 +16,7 @@ const Header = () =>{
                </a>
                </Link>
            </div>
-           <div className="cart">
-            <Image src='/assets/shared/mobile/icon-cart.svg' height={20} width={20} alt="cart"/>
-            </div>
+            <Cart countCart={newState.cartItems.length} cartItems={newState.cartItems}/>
         </div>
     )
   

@@ -5,7 +5,10 @@ import Button from "../../components/ui/button/button"
 import Category from "../../components/ui/category/category";
 import AudioText from "../../components/ui/audiotext/audiotext"
 import Link from "next/link";
+import { useStateContext } from '../../components/CartProvider/cartprovider';
 export default function SingleProductPage(props){  
+    const newState = useStateContext();
+
     const queryCheck = (slug) =>{
         if(slug.includes('headphones')){
             return "headphones"
@@ -39,7 +42,8 @@ export default function SingleProductPage(props){
             <p className={`singleproduct-header`}>{item.name}</p>
             <p className={`singleproduct-body`}>{item.description}</p>
             <p className={`singleproduct-body`}>{`$${item.price}`}</p>
-            <Button buttontext="See Product" buttontype="buttonorange"/>
+
+             <button onClick={()=>newState.onAdd(item)}>add to cart</button>
              </div>
              <div className="singleproduct-features">
              <p className={`features-heading`}>Features</p>
@@ -95,13 +99,13 @@ export default function SingleProductPage(props){
         )})
     }
   return (
-    <MainLayout>
+        <MainLayout>
         {showProduct()}
         <div className="category-category">
         <Category/>
         </div>
         <AudioText/>
-    </MainLayout>
+        </MainLayout>
   )
 }
 

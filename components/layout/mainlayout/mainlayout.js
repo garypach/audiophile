@@ -1,6 +1,6 @@
 import Header from "../header/header"
 import Footer from "../footer/footer"
-
+import Cart from "../../ui/cart/cart"
 const MainLayout = (props) =>
 {
    return(
