@@ -9,4 +9,6 @@
 @use '../components/ui/audiotext/audiotext.scss';
 @use './categorytype.scss';
 @use './singleproduct.scss';
-@use '../components/ui/cart/cart.scss'
+@use './checkout.scss';
+@use '../components/ui/cart/cart.scss';
+@use '../components/ui/summarybasket/summary.scss'

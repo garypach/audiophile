@@ -11,13 +11,13 @@ export default function Cart(props){
             <nav>
             <div className="cart" onClick={toggle}>
             <Image src='/assets/shared/mobile/icon-cart.svg' height={20} width={20} alt="cart"/>
-            {
+            {/* {
               props.countCart ? <div className="countcart">{props.countCart}</div> :''
-            }
+            } */}
             </div>
             <ul className={`cart-menu ${isOpen ? 'cart-active' : ''}`}>
             <li>
-                <Basket cartItems={props.cartItems}/>
+                <Basket countCart={props.countCart} cartItems={props.cartItems}/>
             </li>
             </ul>
           </nav>
@@ -38,7 +38,7 @@ const Basket = (props) =>{
           {cartItems.length === 0 && <div className="empty-cart">Cart is empty</div>} 
           
           {
-              props.countCart ? <div className="countcart">Cart ({props.countCart})</div> :''
+              props.countCart ? <div className="countercart">Cart ({props.countCart})</div> :''
           }
             {cartItems.map((item) => (
           <div key={item.id} className="cart-item-container">
@@ -77,8 +77,12 @@ const Basket = (props) =>{
                 ${totalPrice.toFixed(2)}
               </div>
             </div>
-            <div className="row">
-            <Button buttontype="buttonorange" buttontext="CHECKOUT"/>
+            <div>
+            <Link href="/checkout">
+              <a>
+              <Button buttontype="buttonorange" buttontext="CHECKOUT"/>
+              </a>
+              </Link>
             </div>
           </>
         )}

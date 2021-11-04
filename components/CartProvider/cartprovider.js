@@ -43,91 +43,147 @@ export function CartProvider({children}){
         SetEmailError(false)    
     }
 
-    const[people,SetPeople] = useState(1)
-    const handlePeopleInput = (e)=>{
-        SetPeople(e.target.value)
+    const [phone,SetPhone] = useState('')
+    const handlePhoneInput = (e)=>{
+        SetPhone(e.target.value)
     }
-    const incrementPeople = (e) =>{
-        SetPeople(people + 1)
-    }
-    const decrementPeople = (e) =>{
-        if(people > 1){
-            SetPeople(people - 1)
-        }
-     }
-     const[hour,SetHour] = useState()
-     const handleHourInput = (e)=>{
-        SetHour(e.target.value)
-    }
-    const[hourError,SetHourError] = useState(false)
-    const checkForHour = (e)=>{
-        console.log('check month')
-        function HourValid(etext){
+    const[phoneError,SetPhoneError] = useState(false)
+    const checkForPhone = (e)=>{
+        console.log('check phone')
+        function PhoneValid(etext){
             return /^[0-9]+$/.test(etext)
         }
-        if(HourValid(hour) && e.target.value <= 12 && e.target.value >= 1){
+        if(PhoneValid(phone)){
         }else{
-            SetHourError(true)
+            SetPhoneError(true)
         }
     }
-    const removeHourError =(e)=>{
-     SetHourError(false)    
- }
-    const[minute,SetMinute] = useState()
-     const handleMinuteInput = (e)=>{
-        SetMinute(e.target.value)
+    const removePhoneError =(e)=>{
+        SetPhoneError(false)    
     }
-    const[minuteError,SetMinuteError] = useState(false)
-    const checkForMinute = (e)=>{
-        console.log('check month')
-        function MinuteValid(etext){
+
+
+    const [address,Setaddress] = useState('')
+    const handleaddressInput = (e)=>{
+        Setaddress(e.target.value)
+    }
+    const[addressError,SetaddressError] = useState(false)
+    const checkForaddress= (e)=>{
+        function addressValid(etext){
+            return /^[0-9]+[a-z ,.'-]+$/i.test(etext)
+        }
+        if(addressValid(address)){
+        }else{
+            SetaddressError(true)
+            console.log('check address')
+
+        }
+    }
+    const removeaddressError =(e)=>{
+        SetaddressError(false)    
+    }
+
+    const [zip,SetZip] = useState('')
+    const handleZipInput = (e)=>{
+        SetZip(e.target.value)
+    }
+    const[zipError,SetZipError] = useState(false)
+    const checkForZip= (e)=>{
+        function ZipValid(etext){
             return /^[0-9]+$/.test(etext)
         }
-        if(MinuteValid(minute) && e.target.value <= 59 && e.target.value >= 0){
+        if(ZipValid(zip)){
         }else{
-            SetMinuteError(true)
+            SetZipError(true)
+            console.log('checkzip')
+
         }
     }
-    const removeMinuteError =(e)=>{
-     SetMinuteError(false)    
- }
-    const[month,SetMonth] = useState()
-    const handleMonthInput = (e)=>{
-       SetMonth(e.target.value)
-   }
-   const[monthError,SetMonthError] = useState(false)
-   const checkForMonth = (e)=>{
-       console.log('check month')
-       function MonthValid(etext){
-           return /^[0-9]+$/.test(etext)
-       }
-       if(MonthValid(month) && e.target.value <= 12 && e.target.value >= 1){
-       }else{
-           SetMonthError(true)
-       }
-   }
-   const removeMonthError =(e)=>{
-    SetMonthError(false)    
-}
-   const[day,SetDay] = useState()
-    const handleDayInput = (e)=>{
-       SetDay(e.target.value)
-   }
- 
-const[dayError,SetDayError] = useState(false)
-const checkForDay = (e)=>{
-    console.log('check month')
-    function DayValid(etext){
-        return /^[0-9]+$/.test(etext)
+    const removeZipError =(e)=>{
+        SetZipError(false)    
     }
-    if(DayValid(day) && e.target.value <= 31 && e.target.value >= 1){
-    }else{
-        SetDayError(true)
+
+    const [city,SetCity] = useState('')
+    const handleCityInput = (e)=>{
+        SetCity(e.target.value)
     }
-}
-const removeDayError =(e)=>{
- SetDayError(false)    
-}
+    const[cityError,SetCityError] = useState(false)
+    const checkForCity= (e)=>{
+        function cityValid(etext){
+            return /^[a-z ,.'-]+$/i.test(etext)
+        }
+        if(cityValid(city)){
+        }else{
+            SetCityError(true)
+            console.log('check city')
+
+        }
+    }
+    const removeCityError =(e)=>{
+        SetCityError(false)    
+    }
+
+    const [country,SetCountry] = useState('')
+    const handleCountryInput = (e)=>{
+        SetCountry(e.target.value)
+    }
+    const[countryError,SetCountryError] = useState(false)
+    const checkForCountry= (e)=>{
+        function countryValid(etext){
+            return /^[a-z ,.'-]+$/i.test(etext)
+        }
+        if(countryValid(country)){
+        }else{
+            SetCountryError(true)
+            console.log('check country')
+
+        }
+    }
+    const removeCountryError =(e)=>{
+        SetCityError(false)    
+    }
+
+    const [card,SetCard] = useState('')
+    const handleCardInput = (e)=>{
+        SetCard(e.target.value)
+    }
+    const[cardError,SetCardError] = useState(false)
+    const checkForCard= (e)=>{
+        function cardValid(etext){
+            return /^[0-9]+$/.test(etext)
+        }
+        if(cardValid(card)){
+        }else{
+            SetCardError(true)
+            console.log('check card')
+
+        }
+    }
+    const removeCardError =(e)=>{
+        SetCardError(false)    
+    }
+    
+    const [cvv,SetCvv] = useState('')
+    const handleCvvInput = (e)=>{
+        SetCvv(e.target.value)
+    }
+    const[cvvError,SetCvvError] = useState(false)
+    const checkForCvv= (e)=>{
+        function cvvValid(etext){
+            return /^[0-9]+$/.test(etext)
+        }
+        if(cvvValid(cvv)){
+        }else{
+            SetCvvError(true)
+            console.log('check cvv')
+
+        }
+    }
+    const removeCvvError =(e)=>{
+        SetCvvError(false)    
+    }
+
+   
 const[formSubmit,SetSubmitForm] = useState(false)
 
 const submittedForm = (e) =>{
@@ -135,12 +191,22 @@ const submittedForm = (e) =>{
     if(
         emailError === false 
         && email.length > 5 
-        && nameError === false 
-        && name.length > 2 
-        && monthError === false  
-        && minuteError === false  
-        && hourError === false  
-        && dayError === false
+        && nameError === false
+        && phone.length === 10  
+        && phoneError === false 
+        && address.length > 6
+        && addressError === false 
+        && zipError === false 
+        && zip.length >= 4
+        && city.length > 3
+        && cityError === false 
+        && country.length > 5
+        && countryError === false 
+        && card.length >= 8
+        && cardError === false 
+        && cvvError === false 
+        && cvv.length > 2
+
         ){
         SetSubmitForm(true)
         console.log("submit")
@@ -181,32 +247,17 @@ const onRemove = (product) => {
             checkForEmail,
             removeEmailError,
             emailError,
+            phone,handlePhoneInput,phoneError,checkForPhone,removePhoneError,
+            address,handleaddressInput,addressError,checkForaddress,removeaddressError,
+            zip,handleZipInput,zipError,checkForZip,removeZipError,
+            city,handleCityInput,cityError,checkForCity,removeCityError,
+            country,handleCountryInput,countryError,checkForCountry,removeCountryError,
+            card,handleCardInput,cardError,checkForCard,removeCardError,
+            cvv,handleCvvInput,cvvError,checkForCvv,removeCvvError,
+
             formSubmit,
             submittedForm,
-            people,
-            incrementPeople,
-            decrementPeople,
-            handlePeopleInput,
-            hour,
-            handleHourInput,
-            minute,
-            handleMinuteInput,
-            month,
-            handleMonthInput,
-            day,
-            handleDayInput,
-            monthError,
-            checkForMonth,
-            removeMonthError,
-            dayError,
-            checkForDay,
-            removeDayError,
-            hourError,
-            checkForHour,
-            removeHourError,
-            minuteError,
-            checkForMinute,
-            removeMinuteError,
+           
             cartItems,
             setCartItems,
             onAdd,
