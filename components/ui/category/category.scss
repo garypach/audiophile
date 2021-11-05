@@ -18,13 +18,13 @@ overflow: hidden;
     border-radius: 12px;
 }
 &__img{
-    position: absolute;
-    top: -55px;
+    position: relative;
+    top: -75px;
     width: 100px;
-    height: 130px;
+    height: 120px;
     & img{
         width: 100px;
-        height: 130px;
+        height: 120px;
     }
 }
 &__text{
@@ -35,8 +35,27 @@ overflow: hidden;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    & p{
+    font-style: normal;
+font-weight: bold;
+font-size: 15px;
+text-align: center;
+letter-spacing: 1.07143px;
+text-transform: uppercase;
+
+color: #000000;
+    & p:nth-child(2){
         margin-top: 15px;
+        font-weight: bold;
+font-size: 13px;
+/* identical to box height */
+
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.5;
     }
 }
 }

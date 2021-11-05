@@ -2,11 +2,70 @@ import Image from 'next/image'
 import MainLayout from '../components/layout/mainlayout/mainlayout'
 import { useStateContext } from '../components/CartProvider/cartprovider';
 import Summary from '../components/ui/summarybasket/summary';
+import { useState } from 'react';
+import Cart from '../components/ui/cart/cart';
+import Link from 'next/dist/client/link';
 export default function Checkout(props) {
     const newState = useStateContext();
+    const itemsPrice = newState.cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+    const taxPrice = itemsPrice * 0.14;
+    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+  
+  
   return (
     <MainLayout>
-   <section className="email-modal">
+      <div className={`thank ${newState.isOpen ? 'thank-active' : ''}`}>
+       <div className="thank-heading">
+         thank you for your order
+         </div>
+         <div className="thank-body">
+         You will receive an email confirmation shortly.
+         </div>
+         {newState.cartItems.slice(0, 1).map((item) => (
+      <div key={item.id} className="order-item-container">
+        <div className="order-item-container__img">
+        <Image src={`/${item.image.mobile}`}alt={`${item.name}`} layout="fill"/>
+        </div>
+        <div className="order-item-container__name">
+          <div>
+            {item.name}
+          </div>
+          <div>
+          ${item.price.toFixed(2)}
+          </div>
+          </div>
+        <div className="order-item-container__qty">
+          <div>
+          x{item.qty}
+        </div>
+    
+        </div>
+      </div>
+    ))}
+     <div className="order-extra">
+       <div className="order-line"></div>
+          and {newState.cartItems.length > 1 && newState.cartItems.length - 1} other item(s)
+      </div>
+      <div className="order-total">
+              <div className="order-total__text">
+                <strong>Grand Total</strong>
+              </div>
+              <div className="order-total__number">
+                <strong>${totalPrice.toFixed(2)}</strong>
+              </div>
+            </div>
+            <Link href="/">
+            <a>
+            <button type="submit" className="email-modal__button">
+           BACK TO HOME
+         </button>
+         </a>
+         </Link>
+       </div>
+      
+        
+   <section className={`email-modal ${newState.isOpen ? 'modal-active' : ''}`}>
        <form onSubmit={newState.submittedForm}>
            <div className="checkout-header">
                checkout
@@ -235,9 +294,11 @@ export default function Checkout(props) {
          <div className="summary-cont">
          <Summary countCart={newState.cartItems.length} cartItems={newState.cartItems}/>
          </div>
+        
          <button type="submit" className="email-modal__button">
            continue and pay
          </button>
+      
        </form>
      </section>
     </MainLayout>

@@ -3,9 +3,9 @@ import Link from 'next/link'
 const Category = (props) => {
     return(
         <div className="category-container">
-          <MenuBox category="headphones"/>
-          <MenuBox category="speakers"/>
-          <MenuBox category="earphones"/>
+          <MenuBox image="image-xx99-mark-one-headphones.png" category="headphones"/>
+          <MenuBox image="image-speaker-zx9.png" category="speakers"/>
+          <MenuBox image="image-category-page-preview.png" category="earphones"/>
         </div>
     )
 }
@@ -16,7 +16,7 @@ const MenuBox = (props) =>{
     return(
         <div className="category-container__box">
         <div className="category-container__img">
-            <Image src="/assets/shared/mobile/image-xx99-mark-one-headphones.png" alt={`${props.category}`} layout="fill"/>
+            <Image src={`/assets/shared/mobile/${props.image}`} alt={`${props.category}`} layout="fill"/>
        </div>
        <Link href={`/${props.category}`}>
            <a className="category-container__text">

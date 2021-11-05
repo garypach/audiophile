@@ -208,10 +208,21 @@ const submittedForm = (e) =>{
         && cvv.length > 2
 
         ){
+        scrollToTop()
+        toggle()
         SetSubmitForm(true)
         console.log("submit")
     }
 }
+const [isOpen, setIsOpen] = useState(false);
+const toggle = () => setIsOpen(!isOpen);
+const hide = () => setIsOpen(false);
+const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // for smoothly scrolling
+    });
+  };
 const [cartItems,setCartItems] = useState([]);
 const onAdd = (product) => {
   const exist = cartItems.find(x => x.id === product.id);
@@ -262,6 +273,7 @@ const onRemove = (product) => {
             setCartItems,
             onAdd,
             onRemove,
+            isOpen,
             }}>
             {children}
         </StateContext.Provider>
