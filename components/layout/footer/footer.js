@@ -20,7 +20,7 @@ const Footer = (props) => {
                earphones
            </p>
        </div>
-            <p className="footer-body">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
+            <p className="footer-body">Audiophile is an all in one stop to fulfill your audio needs. We are a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
             <p className="footer-copy">Copyright 2021. All Rights Reserved</p>
             <div className="footer-socials">
             <Image src="/assets/shared/facebook.svg" height={24} width={24}alt="facebook"/>
