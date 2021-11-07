@@ -18,8 +18,11 @@ export default function Index(props){
           return (
             <div key={item.id} className="categoryproduct-container">
             <div className="categoryproduct-container__box">
-             <div className="categoryproduct-container__img">
+             <div className="categoryproduct-container__img mobile-image">
              <Image src={`/${item.categoryImage.mobile}`}alt={`${item.name}`} layout="fill"/>
+             </div>
+             <div className="categoryproduct-container__img tablet-image">
+             <Image src={`/${item.categoryImage.tablet}`}alt={`${item.name}`} layout="fill"/>
              </div>
              <div className="categoryproduct-container__text">
              {

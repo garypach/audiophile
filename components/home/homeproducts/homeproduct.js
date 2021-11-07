@@ -5,8 +5,11 @@ const HomeProduct = (props) => {
     return(
         <div className={`${props.containertype}homeproduct-container`}>
           <div className={`${props.containertype}homeproduct-container__box `}>
-        <div className={`${props.containertype}homeproduct-container__img`}>
+        <div className={`${props.containertype}homeproduct-container__img mobile-image`}>
             <Image src={`/assets/home/mobile/${props.imagesrc}`} alt="headphones" layout="fill"/>
+       </div>
+       <div className={`${props.containertype}homeproduct-container__img tablet-image`}>
+            <Image src={`/assets/home/tablet/${props.imagesrc}`} alt="headphones" layout="fill"/>
        </div>
        <div className={`${props.containertype}homeproduct-container__text`}>
             <p className={`${props.containertype}homeproduct-header`}>{props.header}</p>

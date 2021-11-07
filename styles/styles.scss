@@ -11,4 +11,23 @@
 @use './singleproduct.scss';
 @use './checkout.scss';
 @use '../components/ui/cart/cart.scss';
-@use '../components/ui/summarybasket/summary.scss'
+@use '../components/ui/summarybasket/summary.scss';
+
+
+.mobile-image{
+    display: block;
+}
+.tablet-image{
+    display: none;
+}
+.desktop-image{
+    display: none;
+}
+@media only screen and (min-width: 376px) {
+.mobile-image{
+    display: none;
+}
+.tablet-image{
+    display: block;
+}
+}

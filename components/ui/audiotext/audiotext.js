@@ -4,8 +4,11 @@ const AudioText = (props) => {
     return(
         <div className="audiotext-container">
           <div className="audiotext-container__box">
-        <div className="audiotext-container__img">
+        <div className="audiotext-container__img mobile-image">
             <Image src="/assets/shared/mobile/image-best-gear.jpg" alt="headphones" height="300px" width="327px"/>
+       </div>
+       <div className="audiotext-container__img tablet-image">
+            <Image src="/assets/shared/tablet/image-best-gear.jpg" alt="headphones" height="300px" width="689px"/>
        </div>
        <div className="audiotext-container__text">
        <p className="audiotext-header">Bringing you the <span>best</span> audio gear</p>

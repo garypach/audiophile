@@ -28,7 +28,8 @@ export default function SingleProductPage(props){
         .map(function (item) {
           return (
             <div key={item.id} className="singleproduct-container">
-             <div className="singleproduct-container__img">
+                <div className="single-product-row">
+                <div className="singleproduct-container__img">
              <Image src={`/${item.categoryImage.mobile}`}alt={`${item.name}`} layout="fill"/>
              </div>
              <div className="singleproduct-container__text">
@@ -45,6 +46,8 @@ export default function SingleProductPage(props){
 
              <button onClick={()=>newState.onAdd(item)}>add to cart</button>
              </div>
+                </div>
+             
              <div className="singleproduct-features">
              <p className={`features-heading`}>Features</p>
              <p className={`features-body`}>{`${item.features}`}</p>
@@ -53,7 +56,8 @@ export default function SingleProductPage(props){
                 <div className="inthebox">
                 in the box
                 </div>
-             {item.includes.map(function(includes,idx){
+                <div>
+                {item.includes.map(function(includes,idx){
                     return(
                         <div key={idx} className="includes" >
                         <div className="quantity">
@@ -64,24 +68,40 @@ export default function SingleProductPage(props){
                         </div>
                         </div>
                     )
-                })}        
+                })}  
+                </div>
+                  
             </div>
-             <div className="galleryfirst">
+            <div className="gallery-flex">
+                <div>
+                <div className="galleryfirst">
                 <Image src={`/${item.gallery.first.mobile}`} alt={`${item.name}`} layout="fill"/>
              </div>
              <div className="gallerysecond">
              <Image src={`/${item.gallery.second.mobile}`} alt={`${item.name}`} layout="fill"/>
 
             </div>
+                </div>
+          
+            <div>
             <div className="gallerythird">
             <Image src={`/${item.gallery.third.mobile}`} alt={`${item.name}`} layout="fill"/>
             </div>
-            <div>
+            </div>
+            </div>
+             
+             
+           
+            <div className="otherproduct-row">
                 {item.others.map(function(other,idx){
                     return(
                         <>
-                        <div className="otherproduct-image">
+                        <div className="otherproduct-column">
+                        <div className="otherproduct-image mobile-image">
                         <Image src={`/${other.image.mobile}`} alt={`${other.name}`} layout="fill"/>
+                        </div>
+                        <div className="otherproduct-image tablet-image">
+                        <Image src={`/${other.image.tablet}`} alt={`${other.name}`} layout="fill"/>
                         </div>
                         <div className={`otherproduct-header`}>
                             <p className={``}>{`${other.name}`}</p>
@@ -91,6 +111,8 @@ export default function SingleProductPage(props){
                         <Button buttontext="See Product" buttontype="buttonorange"/>
                         </a>
                         </Link>
+                        </div>
+                        
                         </>
                     )
                 })}

@@ -22,6 +22,8 @@ export default function Checkout(props) {
          <div className="thank-body">
          You will receive an email confirmation shortly.
          </div>
+         <div className="thank-flex">
+           <div className="flex-left">
          {newState.cartItems.slice(0, 1).map((item) => (
       <div key={item.id} className="order-item-container">
         <div className="order-item-container__img">
@@ -47,6 +49,7 @@ export default function Checkout(props) {
        <div className="order-line"></div>
           and {newState.cartItems.length > 1 && newState.cartItems.length - 1} other item(s)
       </div>
+      </div>
       <div className="order-total">
               <div className="order-total__text">
                 <strong>Grand Total</strong>
@@ -54,6 +57,7 @@ export default function Checkout(props) {
               <div className="order-total__number">
                 <strong>${totalPrice.toFixed(2)}</strong>
               </div>
+            </div>
             </div>
             <Link href="/">
             <a>
@@ -72,7 +76,9 @@ export default function Checkout(props) {
            </div>
            <div className="span-header">
                billing details
-           </div>         <div className="email-modal__form-group">
+           </div>   
+           <div className="email-flex">      
+           <div className="email-modal__form-group">
          <p> Name</p>
 
            <div>
@@ -142,10 +148,12 @@ export default function Checkout(props) {
          This field is required
          </div>
        </div>
+       </div>
          </div>
          <div className="span-header">
                shipping info
            </div>
+           <div className="email-flex">
          <div className="email-modal__form-group">
          <p> Your Address</p>
            <div>
@@ -240,10 +248,13 @@ export default function Checkout(props) {
          This field is required
          </div>
        </div>
+       </div>
          </div>
          <div className="span-header">
                payment details
            </div>
+           <div className="email-flex">
+
          <div className="email-modal__form-group">
          <p> Card Number</p>
            <div>
@@ -289,6 +300,7 @@ export default function Checkout(props) {
        >
          This field is required
          </div>
+       </div>
        </div>
          </div>
          <div className="summary-cont">

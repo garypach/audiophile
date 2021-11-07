@@ -9,7 +9,12 @@ const Home = (props) => {
   return (
     <>
        <div className="home-cont">
-           <Image src="/assets/home/mobile/image-header.jpg" width="375" height="600px" alt="header"/>
+         <div className="mobile-image">
+         <Image src="/assets/home/mobile/image-header.jpg" width="375px" height="600px" alt="header"/>
+         </div>
+         <div className="tablet-image">
+         <Image src="/assets/home/tablet/image-header.jpg" width="768px" height="729px" alt="header"/>
+         </div>
         <div className="home-cont__text">
             <h1>NEW PRODUCT</h1>
             <h2>XX99 MARK II HEADPHONES</h2>
