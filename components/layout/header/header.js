@@ -16,6 +16,25 @@ const Header = () =>{
                </a>
                </Link>
            </div>
+           <div className="desktop-image">
+               <ul>
+               <Link href="/headphones">
+                   <a>
+               <li>HEADPHONES</li>
+               </a>
+               </Link>
+               <Link href="/speakers">
+                   <a>
+               <li>SPEAKERS</li>
+               </a>
+               </Link>
+               <Link href="/earphones">
+                   <a>
+               <li>EARPHONES</li>
+               </a>
+               </Link>
+               </ul>
+           </div>
             <Cart countCart={newState.cartItems.length} cartItems={newState.cartItems}/>
         </div>
     )

@@ -31,3 +31,15 @@
     display: block;
 }
 }
+
+@media only screen and (min-width: 769px) {
+    .mobile-image{
+        display: none;
+    }
+    .tablet-image{
+        display: none;
+    }
+    .desktop-image{
+        display: block;
+    }
+    }

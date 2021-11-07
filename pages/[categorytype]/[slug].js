@@ -103,6 +103,9 @@ export default function SingleProductPage(props){
                         <div className="otherproduct-image tablet-image">
                         <Image src={`/${other.image.tablet}`} alt={`${other.name}`} layout="fill"/>
                         </div>
+                        <div className="otherproduct-image desktop-image">
+                        <Image src={`/${other.image.desktop}`} alt={`${other.name}`} layout="fill"/>
+                        </div>
                         <div className={`otherproduct-header`}>
                             <p className={``}>{`${other.name}`}</p>
                         </div>

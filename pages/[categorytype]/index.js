@@ -24,6 +24,9 @@ export default function Index(props){
              <div className="categoryproduct-container__img tablet-image">
              <Image src={`/${item.categoryImage.tablet}`}alt={`${item.name}`} layout="fill"/>
              </div>
+             <div className="categoryproduct-container__img desktop-image">
+             <Image src={`/${item.categoryImage.desktop}`}alt={`${item.name}`} layout="fill"/>
+             </div>
              <div className="categoryproduct-container__text">
              {
                  item.new ? ( 
@@ -38,7 +41,9 @@ export default function Index(props){
             <a>
             <Button buttontext="See Product" buttontype="buttonorange"/>
             </a>
-            </Link>             </div>
+            </Link> 
+                        
+            </div>
            </div>
             </div>
         )})

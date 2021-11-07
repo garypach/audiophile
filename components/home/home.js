@@ -15,6 +15,9 @@ const Home = (props) => {
          <div className="tablet-image">
          <Image src="/assets/home/tablet/image-header.jpg" width="768px" height="729px" alt="header"/>
          </div>
+         <div className="desktop-image">
+         <Image src="/assets/home/desktop/image-hero.jpg" width="1920px" height="1080px" alt="header"/>
+         </div>
         <div className="home-cont__text">
             <h1>NEW PRODUCT</h1>
             <h2>XX99 MARK II HEADPHONES</h2>
