@@ -1,4 +1,4 @@
-import { productData } from "../data";
+import { productData } from "../../data";
 import MainLayout from '../../components/layout/mainlayout/mainlayout'
 import Image from "next/image";
 import Button from "../../components/ui/button/button"
