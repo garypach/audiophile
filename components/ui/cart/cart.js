@@ -11,9 +11,9 @@ export default function Cart(props){
             <nav>
             <div className="cart" onClick={toggle}>
             <Image src='/assets/shared/mobile/icon-cart.svg' height={20} width={20} alt="cart"/>
-            {/* {
+            {
               props.countCart ? <div className="countcart">{props.countCart}</div> :''
-            } */}
+            }
             </div>
             <ul className={`cart-menu ${isOpen ? 'cart-active' : ''}`}>
             <li>
