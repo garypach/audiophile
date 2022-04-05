@@ -22,6 +22,7 @@
 
 .cart{
     position: relative;
+    cursor: pointer;
     .countcart{
         position: absolute;
         top: -15px;
@@ -47,6 +48,7 @@
 font-weight: bold;
 font-size: 24px;
 line-height: 25px;
+color: #000000;
 }
 
 .cart-item-container{
@@ -175,7 +177,7 @@ color: #000000;
 
 .cart-menu{
     width: 100%;
-    right:12%;
+    right:5%;
     color: black;
     transition: .3s ease-in-out;
 }
@@ -208,8 +210,6 @@ color: #000000;
 font-weight: bold;
 font-size: 24px;
 line-height: 25px;
-margin-top:10%;
-
 }
 
 .cart-item-container{
