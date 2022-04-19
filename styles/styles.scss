@@ -23,16 +23,18 @@
 .desktop-image{
     display: none;
 }
-@media only screen and (min-width: 376px) {
-.mobile-image{
-    display: none;
+@media only screen and (min-width: 426px) {
+    .mobile-image{
+        display: none;
+    }
+    .tablet-image{
+        display: block;
+    }
+    .desktop-image{
+        display: none;
+    }
 }
-.tablet-image{
-    display: block;
-}
-}
-
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1077px) {
     .mobile-image{
         display: none;
     }
@@ -42,4 +44,4 @@
     .desktop-image{
         display: block;
     }
-    }
+}

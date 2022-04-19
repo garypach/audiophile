@@ -10,13 +10,13 @@ const Home = (props) => {
     <>
        <div className="home-cont">
          <div className="mobile-image">
-         <Image src="/assets/home/mobile/image-header.jpg" width="375px" height="600px" alt="header"/>
+         <Image src="/assets/home/mobile/image-header.jpg" layout='fill' alt="hero"/>
          </div>
          <div className="tablet-image">
-         <Image src="/assets/home/tablet/image-header.jpg" width="768px" height="729px" alt="header"/>
+         <Image src="/assets/home/tablet/image-header.jpg" layout='fill' alt="hero"/>
          </div>
          <div className="desktop-image">
-         <Image src="/assets/home/desktop/image-hero.jpg" width="1920px" height="1080px" alt="header"/>
+         <Image src="/assets/home/desktop/image-hero.jpg" layout='fill' alt="hero"/>
          </div>
         <div className="home-cont__text">
             <h1>NEW PRODUCT</h1>
