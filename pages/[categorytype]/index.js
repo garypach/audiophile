@@ -8,12 +8,9 @@ import Link from "next/dist/client/link";
 export default function Index(props){  
     const showProducts = () => {
         return productData
-        .sort(item => {
-            return item.new ? -1 : 1 // `true` values first
-          })
         .filter(function (item) {
           return (item.category === `${props.query.categorytype}`);
-        })
+        }).reverse()
         .map(function (item) {
           return (
             <div key={item.id} className="categoryproduct-container">
