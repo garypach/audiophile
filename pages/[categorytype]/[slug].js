@@ -29,9 +29,15 @@ export default function SingleProductPage(props){
           return (
             <div key={item.id} className="singleproduct-container">
                 <div className="single-product-row">
-                <div className="singleproduct-container__img">
-             <Image src={`/${item.categoryImage.mobile}`}alt={`${item.name}`} layout="fill"/>
-             </div>
+                <div className="singleproduct-container__img mobile-image">
+                    <Image src={`/${item.image.mobile}`}alt={`${item.name}`} layout="fill"/>
+                </div>
+                <div className="singleproduct-container__img tablet-image">
+                    <Image src={`/${item.image.tablet}`}alt={`${item.name}`} layout="fill"/>
+                </div>
+                <div className="singleproduct-container__img desktop-image">
+                    <Image src={`/${item.image.desktop}`}alt={`${item.name}`} layout="fill"/>
+                </div>
              <div className="singleproduct-container__text">
              {
                  item.new ? ( 
@@ -42,12 +48,12 @@ export default function SingleProductPage(props){
              }
             <p className={`singleproduct-header`}>{item.name}</p>
             <p className={`singleproduct-body`}>{item.description}</p>
-            <p className={`singleproduct-body`}>{`$${item.price}`}</p>
-
-             <button onClick={()=>newState.onAdd(item)}>add to cart</button>
+            <p className={`singleproduct-price`}>{`$${item.price}`}</p>
+            <button className="add-btn" onClick={()=>newState.onAdd(item)}>add to cart</button>
              </div>
                 </div>
              
+             <div className="features-includes">
              <div className="singleproduct-features">
              <p className={`features-heading`}>Features</p>
              <p className={`features-body`}>{`${item.features}`}</p>
@@ -72,6 +78,8 @@ export default function SingleProductPage(props){
                 </div>
                   
             </div>
+             </div>
+           
             <div className="gallery-flex">
                 <div>
                 <div className="galleryfirst">

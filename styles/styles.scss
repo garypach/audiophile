@@ -33,6 +33,29 @@
     .desktop-image{
         display: none;
     }
+
+    .otherproduct-image.mobile-image{
+        display: block;
+    }
+    .otherproduct-image.tablet-image{
+        display: none;
+    }
+    .otherproduct-image.desktop-image{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 710px) {
+  
+    .otherproduct-image.mobile-image{
+        display: none;
+    }
+    .otherproduct-image.tablet-image{
+        display: block;
+    }
+    .otherproduct-image.desktop-image{
+        display: none;
+    }
 }
 @media only screen and (min-width: 1077px) {
     .mobile-image{
@@ -44,4 +67,14 @@
     .desktop-image{
         display: block;
     }
+    .otherproduct-image.mobile-image{
+        display: none;
+    }
+    .otherproduct-image.tablet-image{
+        display: none;
+    }
+    .otherproduct-image.desktop-image{
+        display: block;
+    }
 }
+
