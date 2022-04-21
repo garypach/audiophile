@@ -7,7 +7,7 @@ const MobileMenu = () => {
     const hide = () => setIsOpen(false);
   
     return (
-      <nav>
+      <nav className="mobile-nav">
         <div className="menu" onClick={toggle}>
         <Image src='/assets/icon-menu.svg' height={15} width={20} alt="menu"/>
         </div>

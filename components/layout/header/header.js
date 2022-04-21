@@ -7,8 +7,11 @@ const Header = () =>{
     const newState = useStateContext();
 
         return(
+        <div className='header'>
+            
+
         <div className="top-header">
-           <MobileMenu/>
+        <MobileMenu/>
            <div className="logo">
                <Link href="/">
                    <a>
@@ -16,7 +19,7 @@ const Header = () =>{
                </a>
                </Link>
            </div>
-           <div className="desktop-image">
+           <div className="nav-links">
                <ul>
                <Link href="/headphones">
                    <a>
@@ -36,7 +39,11 @@ const Header = () =>{
                </ul>
            </div>
             <Cart countCart={newState.cartItems.length} cartItems={newState.cartItems}/>
+
         </div>
+
+        </div>
+       
     )
   
 }

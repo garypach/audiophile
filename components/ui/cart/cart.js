@@ -77,7 +77,7 @@ const Basket = (props) =>{
                 ${totalPrice.toFixed(2)}
               </div>
             </div>
-            <div>
+            <div className='basket-checkout-btn'>
             <Link href="/checkout">
               <a>
               <Button buttontype="buttonorange" buttontext="CHECKOUT"/>

@@ -1,20 +1,27 @@
+
+.menu{
+
+    cursor: pointer;
+}
 .mobile-menu{
     position: absolute;
+    padding: 40px 0;
     width: 100%;
     height: fit-content;
-  
     background-color: rgb(252, 252, 252);
-    top: -2000%;
+    top: 100%;
     left: 0;
     color: black;
     transition: .5s ease-in-out;
+    z-index: 5;
+    display: none;
 }
 
 .mobile-active{
-    top: 100%;
+    display: block;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1077px) {
     .menu{
         display: none;
     }
@@ -25,7 +32,6 @@
     .mobile-active{
         display: none;
         visibility: hidden;
-        top: -2000%;
     }
     
 }

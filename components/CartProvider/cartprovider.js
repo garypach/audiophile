@@ -5,7 +5,12 @@ export const StateContext = createContext();
 export function useStateContext(){
     return useContext(StateContext)
 }
+
+
 export function CartProvider({children}){
+
+
+
     const [name,SetName] = useState('')
     const handleNameInput = (e)=>{
         SetName(e.target.value)
@@ -214,6 +219,8 @@ const submittedForm = (e) =>{
         console.log("submit")
     }
 }
+
+
 const [isOpen, setIsOpen] = useState(false);
 const toggle = () => setIsOpen(!isOpen);
 const hide = () => setIsOpen(false);

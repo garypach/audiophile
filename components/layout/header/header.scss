@@ -1,16 +1,25 @@
-.top-header{
+.header{
+    width: 100%;
+    min-height: 70px;
     background: black;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    color: white;
+}
+
+.top-header{
+    display: flex;
+    background-color: black;
+    position: absolute;
     width: 100%;
-    height: 70px;
-    justify-content: space-around;
+    min-height: 70px;
+    justify-content: center;
     align-items: center;
     color: white;
-    z-index: 98;
     transition: background .3s ease-in-out;
-	
-
+    z-index: 6;
     & .logo{
         font-size: 24px;
         font-weight: bold;
@@ -18,52 +27,62 @@
             color: white;
         }
     }
+
+    .nav-links{
+        color: white;
+        display: none;
+    }
+}
+@media only screen and (min-width: 426px) {
+    .top-header{
+        justify-content: space-around;
+        
+    }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1077px) {
     .top-header{
-        background: black;
         display: flex;
         position: relative;
         width: 100%;
-        height: 70px;
-        justify-content: space-around;
+        max-width: 1110px;
+        min-height: 70px;
+        justify-content: space-between;
         align-items: center;
         color: white;
         transition: background .3s ease-in-out;
-    
-        .logo{
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left;
-           
-        }
-    & a{
-        color: white;
-    }
-
-    & ul{
-        width: 100%;
-        max-width: 800px;
-        display: flex;
-        justify-content: center;
-         
-        & li{
-            margin-right: 34px;
-        }
-        & li:hover{
-            color: #D87D4A;
-            ;
-        }
-
-    }
+        z-index: 6;
         & .logo{
             font-size: 24px;
             font-weight: bold;
-            margin-left: -100px;
-
             & a{
                 color: white;
+            }
+        }
+
+        .nav-links{
+            color: white;
+            display: block;
+            width: 100%;
+            max-width: 429px;
+
+            ul{
+                display: flex;
+                justify-content: space-between;
+                li{
+                    font-size: 13px;
+line-height: 25px;
+
+/* identical to box height, or 192% */
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+&:hover{
+    color: #D87D4A;
+}
+                }
             }
         }
     }
